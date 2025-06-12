@@ -138,7 +138,7 @@ li {
 
 .para-1 {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   text-align: center;
@@ -275,11 +275,11 @@ li {
 }
 
 .progress-line.bootstrap span {
-  width: 80%;
+  width: 85%;
 }
 
 .progress-line.sass span {
-  width: 60%;
+  width: 55%;
 }
 
 .progress-line.js span {
@@ -298,13 +298,20 @@ li {
 }
 
 .progress-line.express span {
-  width: 68%;
+  width: 70%;
 }
 
 .progress-line.mongo span {
-  width: 90%;
+  width: 85%;
 }
 
+.progress-line.python span {
+  width: 65%;
+}
+
+.progress-line.cpp span {
+  width: 40%;
+}
 .bar .progress-line span::after {
   position: absolute;
   right: 0;
@@ -334,9 +341,8 @@ li {
   content: '90%';
 
 }
-
-.progress-line.bootstrap span::after {
-  content: '80%';
+progress-line.bootstrap span::after {
+  content: '85%';
 
 }
 
@@ -362,15 +368,27 @@ li {
 
 }
 
+
 .progress-line.express span::after {
-  content: '68%';
+  content: '70%';
 
 }
 
 .progress-line.mongo span::after {
-  content: '90%';
+  content: '85%';
 
 }
+
+.progress-line.python span::after {
+  content: '65%';
+
+}
+
+.progress-line.cpp span::after {
+  content: '40%';
+
+}
+
 
 .container {
   max-width: 130rem;
