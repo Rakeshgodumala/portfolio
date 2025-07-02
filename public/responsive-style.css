@@ -312,6 +312,7 @@ li {
 .progress-line.cpp span {
   width: 40%;
 }
+
 .bar .progress-line span::after {
   position: absolute;
   right: 0;
@@ -341,7 +342,8 @@ li {
   content: '90%';
 
 }
-progress-line.bootstrap span::after {
+
+.progress-line.bootstrap span::after {
   content: '85%';
 
 }
@@ -368,7 +370,6 @@ progress-line.bootstrap span::after {
 
 }
 
-
 .progress-line.express span::after {
   content: '70%';
 
@@ -388,7 +389,6 @@ progress-line.bootstrap span::after {
   content: '40%';
 
 }
-
 
 .container {
   max-width: 130rem;
@@ -833,8 +833,8 @@ footer p {
 }
 
 .social a {
-  margin-left: 20px;
-  font-size: 20px;
+  margin-left: 30px;
+  font-size:35px;
   transition: 0.6s;
 }
 
