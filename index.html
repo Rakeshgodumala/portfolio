@@ -74,7 +74,7 @@
                         <div class="text-2">Rakesh Godumala </div>
                         <div class="text-3">And I,m a <span class="typed"></span></div>
                     </div>
-                    <a href="./src/resumeportfolio.pdf" type="file" target="_blank" class="btn-resume"
+                    <a href="./src/Infosys sp dse resume MCA.pdf" type="file" target="_blank" class="btn-resume"
                         style="font-weight: bold;">Download Resume</a>
                     <div class="para-1 mt-5" style="text-align:justify;">
                         <p style="font-weight: bold; font-size: 30px; color: crimson;">About me</p>
@@ -85,7 +85,7 @@
                 </div>
                 <!-- right side hero section  -->
                 <div class="hero-image">
-                    <img src="images/microsoft shirt pista house.png" alt="my_image" class="image" />
+                    <img src="images/IDENTITY LINKEDIN.jpg" alt="my_image" class="image" />
 
                 </div>
             </div>
@@ -319,17 +319,22 @@
                 <h2>Contact me</h2>
                 <div style="border: 1px solid crimson;"></div>
                 <div class="content">
-                    <form action="#">
+                    <form id="contactForm" onsubmit="sendContact(event)">
                         <div class="email">
                             <div class="text">Email *</div>
-                            <input type="email" class="size form-control" placeholder="Enter your email" required>
+                            <input id="contactEmail" type="email" class="size form-control" placeholder="Enter your email" required>
                         </div>
+                    
                         <div class="msg mb-4">
                             <div class="text">Message *</div>
-                            <textarea cols="25" rows="2" class="size-msg form-control" required></textarea>
+                            <textarea id="contactMessage" cols="25" rows="2" class="size-msg form-control" required></textarea>
                         </div>
-                        <button class="btn btn-danger btn-lg mb-5">Send</button>
+                    
+                        <div id="contactAlert" style="color: green; font-weight: bold; display: none;">Message sent successfully!</div>
+                    
+                        <button class="btn btn-danger btn-lg mb-5" type="submit">Send</button>
                     </form>
+                    
                 </div>
 
             </div>
@@ -337,7 +342,7 @@
         </div>
 
         <div class="copyrights box">
-            <div class="copy">&copy; Copyrights 2025 Rakesh Godumala </div>
+            <div class="copy">&copy; Copyrights 2026 Rakesh Godumala </div>
         </div>
     </footer>
     <!---...............................................................Modal section........................................................-->
@@ -351,23 +356,33 @@
                 <div class="modal-body">
                     <dl>
                         <dt>Name*</dt>
-                        <dd><input type="text" class="form-control"></dd>
+                        <dd><input id="hireName" type="text" class="form-control" required></dd>
                         <dt>Email*</dt>
-                        <dd><input type="email" class="form-control"></dd>
+                        <dd><input id="hireEmail" type="email" class="form-control" required></dd>
                         <dt>Contact no</dt>
-                        <dd><input type="text" class="form-control"></dd>
+                        <dd><input id="hireContact" type="text" class="form-control"></dd>
                     </dl>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary">Send</button>
+                    <button class="btn btn-primary" onclick="sendHire()">Send</button>
                     <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                 </div>
+                
             </div>
         </div>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("YOUR_PUBLIC_KEY"); /* <-- Replace with EmailJS Public Key */
+    })();
+</script>
+
+
     <script src="public/style.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -376,6 +391,9 @@
             duration: 2000
         });
     </script>
+
+
+
 </body>
 
 </html>
