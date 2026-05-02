@@ -69,8 +69,56 @@ function btnClick(){
 /*..................................................................................... */
 
 var typed=new Typed(".typed",{
-  strings:["UI Developer","Designer"],
-  typeSpeed:100,
-  backSpeed:50,
+  strings:["UI Developer","MERN Stack Developer"],
+  typeSpeed:120,
+  backSpeed:45,
   loop:true
 })
+
+/* ------------------------------
+    EMAILJS — Contact Form
+-------------------------------*/
+function sendContact(event) {
+  event.preventDefault();
+
+  let email = document.getElementById("contactEmail").value;
+  let message = document.getElementById("contactMessage").value;
+
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_CONTACT", {
+      user_email: email,
+      user_message: message
+  })
+  .then(() => {
+      document.getElementById("contactAlert").style.display = "block";
+      document.getElementById("contactForm").reset();
+  })
+  .catch((err) => {
+      alert("Failed to send message.");
+      console.log(err);
+  });
+}
+
+/* ------------------------------
+  EMAILJS — Hire Me Form
+-------------------------------*/
+function sendHire() {
+  let name = document.getElementById("hireName").value;
+  let email = document.getElementById("hireEmail").value;
+  let contact = document.getElementById("hireContact").value;
+
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_HIRE", {
+      user_name: name,
+      user_email: email,
+      user_contact: contact
+  })
+  .then(() => {
+      alert("Details sent successfully!");
+      document.getElementById("hireName").value = "";
+      document.getElementById("hireEmail").value = "";
+      document.getElementById("hireContact").value = "";
+  })
+  .catch((err) => {
+      alert("Failed to send details.");
+      console.log(err);
+  });
+}
